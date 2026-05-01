@@ -201,7 +201,7 @@ h3:last-of-type {
 
 .auth-buttons {
   display: flex;
-  gap: 12px; /* 🔥 space between buttons */
+  gap: 12px; 
   margin-top: 10px;
 }
 
@@ -215,11 +215,11 @@ h3:last-of-type {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 20px 30px; /* 🔥 ye important hai */
+  padding: 20px 30px; 
 }
 
 .logout-btn {
-  margin-right: 10px; /* thoda gap edge se */
+  margin-right: 10px; 
 }
 
 .header {
