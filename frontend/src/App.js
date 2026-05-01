@@ -156,9 +156,9 @@ function App() {
   // ---------------- UI ----------------
   return (
     <div className="container">
-      <h1>🚀 Task Manager Pro</h1>
+      <h1> Task Manager Pro</h1>
       <p className="role-tag">
-        {role === "admin" ? "👨‍💼 ADMIN" : "👨‍💻 MEMBER"}
+        {role === "admin" ? " ADMIN" : " MEMBER"}
       </p>
 
       {!token ? (
