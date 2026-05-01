@@ -20,7 +20,7 @@ function App() {
 
   // ---------------- AUTH ----------------
   const signup = async () => {
-    await fetch("http://localhost:5000/auth/signup", {
+    await fetch("https://task-manager-backend-axyh.onrender.com/auth/signup", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ email, password }),
@@ -29,7 +29,7 @@ function App() {
   };
 
   const login = async () => {
-    const res = await fetch("http://localhost:5000/auth/login", {
+    const res = await fetch("https://task-manager-backend-axyh.onrender.com/auth/login", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ email, password }),
@@ -58,7 +58,7 @@ function App() {
 
   // ---------------- USERS ----------------
   const getUsers = async () => {
-    const res = await fetch("http://localhost:5000/users", {
+    const res = await fetch("https://task-manager-backend-axyh.onrender.com/users", {
       headers: { Authorization: "Bearer " + token },
     });
     const data = await res.json();
@@ -67,7 +67,7 @@ function App() {
 
   // ---------------- TASKS ----------------
   const getTasks = async () => {
-    const res = await fetch("http://localhost:5000/tasks", {
+    const res = await fetch("https://task-manager-backend-axyh.onrender.com/tasks", {
       headers: { Authorization: "Bearer " + token },
     });
     const data = await res.json();
@@ -75,7 +75,7 @@ function App() {
   };
 
   const createTask = async () => {
-    await fetch("http://localhost:5000/tasks", {
+    await fetch("https://task-manager-backend-axyh.onrender.com/tasks", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -93,7 +93,7 @@ function App() {
   const toggleTask = async (id, status) => {
     const newStatus = status === "pending" ? "completed" : "pending";
 
-    await fetch(`http://localhost:5000/tasks/${id}`, {
+    await fetch(`https://task-manager-backend-axyh.onrender.com/tasks/${id}`, {
       method: "PUT",
       headers: {
         "Content-Type": "application/json",
@@ -106,7 +106,7 @@ function App() {
   };
 
   const deleteTask = async (id) => {
-    await fetch(`http://localhost:5000/tasks/${id}`, {
+    await fetch(`https://task-manager-backend-axyh.onrender.com/tasks/${id}`, {
       method: "DELETE",
       headers: { Authorization: "Bearer " + token },
     });
@@ -122,7 +122,7 @@ function App() {
   const handleDrop = async (e, status) => {
     const id = e.dataTransfer.getData("taskId");
 
-    await fetch(`http://localhost:5000/tasks/${id}`, {
+    await fetch(`https://task-manager-backend-axyh.onrender.com/tasks/${id}`, {
       method: "PUT",
       headers: {
         "Content-Type": "application/json",
