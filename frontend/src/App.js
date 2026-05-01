@@ -146,11 +146,12 @@ function App() {
 
   // ---------------- LOAD ----------------
   useEffect(() => {
-    if (token) {
-      getTasks();
-      getUsers();
-    }
-  }, [token]);
+  if (token) {
+    getTasks();
+    getUsers();
+  }
+  // eslint-disable-next-line
+}, [token]);
 
   // ---------------- UI ----------------
   return (
